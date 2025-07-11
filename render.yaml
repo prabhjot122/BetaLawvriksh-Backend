@@ -1,0 +1,24 @@
+services:
+  # Backend API Service
+  - type: web
+    name: lawvriksh-feedback-fastapi
+    runtime: python3
+    buildCommand: "cd backend && pip install -r requirements.txt"
+    startCommand: "cd backend && gunicorn --bind 0.0.0.0:$PORT main:app"
+    plan: free
+    region: oregon
+    branch: main
+    rootDir: .
+    envVars:
+      - key: FLASK_ENV
+        value: production
+      - key: ADMIN_API_KEY
+        generateValue: true
+      - key: PYTHONPATH
+        value: /opt/render/project/src/backend
+      - key: PIP_NO_CACHE_DIR
+        value: "1"
+      - key: PYTHON_VERSION
+        value: "3.11"
+      - key: CORS_ORIGINS
+        value: "https://lawvrikshbetapage.onrender.com"
