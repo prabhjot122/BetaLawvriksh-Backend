@@ -227,7 +227,7 @@ class Feedback:
                 else:
                     raise Exception("Failed to retrieve created feedback")
 
-        except mysql.connector.Error as e:
+        except pymysql.Error as e:
             logger.error(f"Error creating feedback: {e}")
             raise
 
