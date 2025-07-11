@@ -46,7 +46,7 @@ cors_origins = [
     "http://localhost:5175",
     "https://lawvrikshbetapage.onrender.com",
     "https://preorder.lawvriksh.com/",
-    "https://lawvriksh.com/"
+    "https://lawvriksh.com"
 
 ]
 
