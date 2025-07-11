@@ -66,6 +66,8 @@ def create_tables():
         features TEXT DEFAULT NULL,
         legal_challenges TEXT DEFAULT NULL,
         additional_comments TEXT DEFAULT NULL,
+        contact_willing VARCHAR(10) DEFAULT NULL,
+        contact_email VARCHAR(255) DEFAULT NULL,
         submitted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
         ip_address VARCHAR(45) DEFAULT NULL,
         user_agent TEXT DEFAULT NULL,
